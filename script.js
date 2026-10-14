@@ -1,34 +1,81 @@
-const daftarTeks = ["Custom Desain", "Harga Murah", "Layanan Cepat"];
+/* GANTI DENGAN NOMOR WHATSAPP BISNIS KAMU.
+   Contoh: 081234567890 menjadi 6281234567890 */
+const NOMOR_WA = "6281234567890";
 
-let index = 0;
+function linkWhatsApp(pesan) {
+  return `https://wa.me/${NOMOR_WA}?text=${encodeURIComponent(pesan)}`;
+}
 
-const elemenTeks = document.getElementById("teks-berganti");
+// MENU HAMBURGER HP
+const menuToggle = document.getElementById("menu-toggle");
+const navMenu = document.getElementById("nav-menu");
+
+menuToggle.addEventListener("click", function () {
+  const terbuka = navMenu.classList.toggle("open");
+
+  menuToggle.setAttribute("aria-expanded", terbuka);
+  menuToggle.setAttribute("aria-label", terbuka ? "Tutup menu" : "Buka menu");
+
+  menuToggle.textContent = terbuka ? "✕" : "☰";
+});
+
+// Tutup menu setelah salah satu link diklik
+navMenu.querySelectorAll("a").forEach(function (link) {
+  link.addEventListener("click", function () {
+    navMenu.classList.remove("open");
+    menuToggle.setAttribute("aria-expanded", "false");
+    menuToggle.setAttribute("aria-label", "Buka menu");
+    menuToggle.textContent = "☰";
+  });
+});
+
+// TEKS BERGANTI OTOMATIS
+const teksBerganti = document.getElementById("teks-berganti");
+const daftarTeks = [
+  "berkesan.",
+  "profesional.",
+  "sesuai gayamu.",
+  "lebih dikenal.",
+];
+
+let indeksTeks = 0;
 
 setInterval(function () {
-  index = (index + 1) % daftarTeks.length;
+  teksBerganti.style.opacity = "0";
 
-  elemenTeks.textContent = daftarTeks[index];
-}, 1000);
+  setTimeout(function () {
+    indeksTeks = (indeksTeks + 1) % daftarTeks.length;
+    teksBerganti.textContent = daftarTeks[indeksTeks];
+    teksBerganti.style.opacity = "1";
+  }, 300);
+}, 2500);
 
-const tombolWA = document.getElementById("wa-float");
-const nomorWA = "6281585541885";
-const pesan = "Halo Baye Project, Saya Ingin Memesan Lanyard atau Id Card.";
+// TOMBOL PESAN SETIAP PRODUK
+document.querySelectorAll(".btn-pesan").forEach(function (tombol) {
+  const namaProduk = tombol.dataset.produk;
 
-tombolWA.href = `https://wa.me/${nomorWA}?text=${encodeURIComponent(pesan)}`;
+  tombol.href = linkWhatsApp(
+    `Halo Baye Project, saya ingin memesan ${namaProduk}. Mohon informasi harga dan minimal pemesanannya.`,
+  );
 
-function pesanProduk(event, namaProduk, hargaProduk) {
-  event.preventDefault();
+  tombol.target = "_blank";
+  tombol.rel = "noopener noreferrer";
+});
 
-  const nomorWA = "6281234567890"; // Ganti dengan nomor WhatsApp kamu
+// TOMBOL KONTAK WHATSAPP
+const pesanUmum =
+  "Halo Baye Project, saya ingin konsultasi tentang custom lanyard.";
 
-  const pesan = `Halo Baye Project, saya ingin memesan:
+const kontakWa = document.getElementById("kontak-wa");
+kontakWa.href = linkWhatsApp(pesanUmum);
+kontakWa.target = "_blank";
+kontakWa.rel = "noopener noreferrer";
 
-Produk: ${namaProduk}
-Harga: ${hargaProduk}
+// WHATSAPP MELAYANG
+const waFloat = document.getElementById("wa-float");
+waFloat.href = linkWhatsApp(pesanUmum);
+waFloat.target = "_blank";
+waFloat.rel = "noopener noreferrer";
 
-Mohon informasi lebih lanjut. Terima kasih.`;
-
-  const url = `https://wa.me/${nomorWA}?text=${encodeURIComponent(pesan)}`;
-
-  window.open(url, "_blank");
-}
+// TAHUN OTOMATIS DI FOOTER
+document.getElementById("tahun").textContent = new Date().getFullYear();
