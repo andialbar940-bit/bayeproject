@@ -4,139 +4,246 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Custom Lanyard Sinjai</title>
+    <meta name="description" content="Baye Project - Custom lanyard sesuai desainmu">
+    <title>document</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <!-- NAVBAR -->
     <header>
-        <img src="images/Baye Project Monogram Logo.png" alt="logo">
-        <h2>Custom Lanyard Sesuai Keinginanmu</h2>
+        <nav class="navbar container">
+            <a href="#beranda" class="logo">
+                BAYE <span>PROJECT</span>
+            </a>
+
+            <button class="menu-toggle" id="menu-toggle"
+                aria-label="Buka menu" aria-expanded="false">
+                ☰
+            </button>
+
+            <div class="nav-menu" id="nav-menu">
+                <a href="#beranda">Beranda</a>
+                <a href="#produk">Produk</a>
+                <a href="#tentang">Tentang</a>
+                <a href="#kontak" class="nav-button">Hubungi Kami</a>
+            </div>
+        </nav>
     </header>
 
+    <!-- HERO -->
     <main>
-        <h2>Selamat Datang</h2>
+        <section class="hero" id="beranda">
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <p class="subtitle">CUSTOM LANYARD • BAYE PROJECT</p>
 
-        <b>PERCETAKAN LANYARD TERPERCAYA DI SINJAI</b>
+                    <h1>
+                        Buat identitasmu lebih
+                        <span id="teks-berganti">berkesan.</span>
+                    </h1>
 
-        <p>
-            Kami menyediakan pembuatan lanyard dan ID Card
-        </p>
+                    <p class="description">
+                        Lanyard custom untuk komunitas, organisasi,
+                        sekolah, acara, dan kebutuhan bisnis.
+                        Desain sesuai keinginanmu.
+                    </p>
 
-        <h2>
-            <span id="teks-berganti">Desain Custom</span>
-        </h2>
-    <div class="ts">Baye Project melayani percetakan lanyard custom berkualitas
-         <br>untuk event, kantor, kampus, sekolah, dan komunitas.
-         <br>Kami menghadirkan bahan grade A, desain custom gratis, 
-         <br>hasil cetak rapi, serta pengerjaan cepat dengan harga transparan.
-         <br>Solusi tepat untuk kebutuhan identitas, penghargaan, dan promosi Anda.
-    </div>
+                    <div class="hero-buttons">
+                        <a href="#produk" class="button primary">
+                            Lihat Produk
+                        </a>
+
+                        <a href="#kontak" class="button secondary">
+                            Konsultasi
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="lanyard-design">
+                        <div class="lanyard-loop"></div>
+                        <div class="lanyard-strip">
+                            BAYE PROJECT • CUSTOM • BAYE PROJECT
+                        </div>
+                        <div class="lanyard-clip"></div>
+                        <div class="lanyard-card">
+                            BAYE<br>PROJECT
+                        </div>
+                    </div>
+                    <p>DESAIN SESUAI KEINGINANMU</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- PRODUK -->
+        <section class="produk section" id="produk">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="subtitle">KATALOG PRODUK</p>
+                    <h2>Pilih Lanyard Favoritmu</h2>
+                    <p>
+                        Pilih produk dan pesan langsung melalui WhatsApp.
+                    </p>
+                </div>
+
+                <div class="produk-container">
+
+                    <article class="produk-card">
+                        <div class="produk-gambar gambar-hijau">
+                            <span>BAYE • PROJECT • CUSTOM</span>
+                        </div>
+
+                        <div class="produk-info">
+                            <span class="label">Favorit</span>
+                            <h3>Lanyard Custom 2 cm</h3>
+                            <p>
+                                Lanyard custom dengan desain sesuai
+                                logo, warna, dan tulisan pilihanmu.
+                            </p>
+
+                            <div class="harga">
+                                Mulai Rp5.000 <small>/ pcs*</small>
+                            </div>
+
+                            <a href="#" class="btn-pesan"
+                                data-produk="Lanyard Custom 2 cm">
+                                Pesan via WhatsApp
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="produk-card">
+                        <div class="produk-gambar gambar-hitam">
+                            <span>YOUR LOGO • YOUR STYLE</span>
+                        </div>
+
+                        <div class="produk-info">
+                            <span class="label biru">Minimalis</span>
+                            <h3>Lanyard Custom 2,5 cm</h3>
+                            <p>
+                                Ukuran lebih lebar untuk menampilkan
+                                logo dan tulisan dengan jelas.
+                            </p>
+
+                            <div class="harga">
+                                Mulai Rp6.000 <small>/ pcs*</small>
+                            </div>
+
+                            <a href="#" class="btn-pesan"
+                                data-produk="Lanyard Custom 2,5 cm">
+                                Pesan via WhatsApp
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="produk-card">
+                        <div class="produk-gambar gambar-oranye">
+                            <span>EVENT • COMMUNITY • EVENT</span>
+                        </div>
+
+                        <div class="produk-info">
+                            <span class="label oranye">Untuk Event</span>
+                            <h3>Lanyard Event</h3>
+                            <p>
+                                Cocok untuk panitia, seminar,
+                                organisasi, dan kegiatan komunitas.
+                            </p>
+
+                            <div class="harga">
+                                Hubungi Kami
+                            </div>
+
+                            <a href="#" class="btn-pesan"
+                                data-produk="Lanyard Event">
+                                Tanya Harga via WhatsApp
+                            </a>
+                        </div>
+                    </article>
+
+                </div>
+
+                <p class="catatan-harga">
+                    *Harga di atas adalah contoh. Sesuaikan dengan
+                    harga dan ketentuan pesanan Baye Project.
+                </p>
+            </div>
+        </section>
+
+        <!-- TENTANG -->
+        <section class="tentang section" id="tentang">
+            <div class="container tentang-content">
+                <div>
+                    <p class="subtitle">BAYE PROJECT</p>
+                    <h2>Custom Sesuai Kebutuhanmu</h2>
+                </div>
+
+                <div class="fitur-list">
+                    <div class="fitur">
+                        <span>✓</span>
+                        <div>
+                            <h3>Desain Custom</h3>
+                            <p>Gunakan logo, warna, dan tulisan pilihanmu.</p>
+                        </div>
+                    </div>
+
+                    <div class="fitur">
+                        <span>✓</span>
+                        <div>
+                            <h3>Pemesanan Mudah</h3>
+                            <p>Konsultasi dan pemesanan melalui WhatsApp.</p>
+                        </div>
+                    </div>
+
+                    <div class="fitur">
+                        <span>✓</span>
+                        <div>
+                            <h3>Untuk Berbagai Acara</h3>
+                            <p>Cocok untuk komunitas, organisasi, dan bisnis.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- KONTAK -->
+        <section class="kontak section" id="kontak">
+            <div class="container kontak-box">
+                <div>
+                    <p class="subtitle">PUNYA DESAIN SENDIRI?</p>
+                    <h2>Yuk, Buat Lanyard Versimu!</h2>
+                    <p>Konsultasikan desain dan kebutuhan pesananmu.</p>
+                </div>
+
+                <a href="#" id="kontak-wa" class="button tombol-putih">
+                    Hubungi via WhatsApp ↗
+                </a>
+            </div>
+        </section>
     </main>
-    <a href="#" id="wa-float" target="_blank" aria-label="Chat-WhatsApp">
-         <img
-        src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
-        alt="WhatsApp"
-    >
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container footer-content">
+            <a href="#beranda" class="logo">
+                BAYE <span>PROJECT</span>
+            </a>
+
+            <p>Custom lanyard sesuai gaya dan kebutuhanmu.</p>
+
+            <small>
+                © <span id="tahun"></span> Baye Project.
+                Semua hak dilindungi.
+            </small>
+        </div>
+    </footer>
+
+    <!-- WHATSAPP MELAYANG -->
+    <a href="#" id="wa-float" aria-label="Chat WhatsApp">
+        <svg viewBox="0 0 32 32" aria-hidden="true">
+            <path fill="currentColor" d="M16 .8A15 15 0 0 0 3.1 23.5L1 31l7.7-2A15 15 0 1 0 16 .8Zm0 27.4a12.3 12.3 0 0 1-6.3-1.7l-.5-.3-4.6 1.2 1.2-4.5-.3-.5A12.3 12.3 0 1 1 16 28.2Zm6.8-9.2c-.4-.2-2.2-1.1-2.6-1.2-.4-.1-.6-.2-.9.2-.3.4-1 1.2-1.2 1.4-.2.3-.5.3-.9.1-.4-.2-1.6-.6-3-1.9-1.1-1-1.9-2.2-2.1-2.6-.2-.4 0-.6.2-.8l.6-.7c.2-.2.3-.4.4-.6.1-.3 0-.5 0-.7s-.9-2.1-1.3-2.9c-.3-.7-.6-.6-.9-.6h-.8c-.3 0-.7.1-1.1.5-.4.4-1.4 1.3-1.4 3.2s1.4 3.7 1.6 4c.2.3 2.8 4.3 6.8 6 .9.4 1.6.6 2.1.7.9.3 1.8.2 2.5.1.8-.1 2.2-.9 2.5-1.8.3-.9.3-1.7.2-1.8-.1-.2-.4-.3-.8-.5Z"/>
+        </svg>
     </a>
-
-    
-<section class="katalog">
-    <div class="produk-container">
-
-        <!-- Produk 1 -->
-        <div class="produk-card">
-            <div class="produk-gambar">
-                <img src="images/WhatsApp Image 2026-10-14 at 15.53.51.jpeg" alt="Tali Lanyard Custom">
-            </div>
-
-            <div class="produk-info">
-                <span class="label">🏷 Lanyard</span>
-                <h3>Tali Lanyard Custom</h3>
-                <p>Tali lanyard custom kualitas Grade A dengan cetakan tajam dan warna tidak luntur.</p>
-
-                <div class="fitur">
-                    <span>Proses Cepat</span>
-                    <span>Kualitas Grade A</span>
-                </div>
-
-                <small>Mulai dari</small>
-                <h3>Rp 18.000</h3>
-                <h3>Hubungi kami <small>/ pcs</small></h3>
-                <small>◷ 2–4 hari kerja &nbsp; • &nbsp; 📍 Sinjai</small>
-                <a href="#" class="btn-pesan"
-   onclick="pesanProduk(event, 'Tali Lanyard Custom', 'Hubungi kami')">
-    Pesan Sekarang
-</a>
-            </div>
-        </div>
-
-        <!-- Produk 2 -->
-        <div class="produk-card">
-            <div class="produk-gambar">
-                <img src="images/WhatsApp Image 2026-10-14 at 15.54.11.jpeg" alt="ID Card Custom">
-            </div>
-
-            <div class="produk-info">
-                <span class="label biru">▤ ID Card</span>
-                <h3>ID Card Custom</h3>
-                <p>ID card PVC custom dengan hasil cetak tajam dan kualitas profesional.</p>
-
-                <div class="fitur">
-                    <span>Cetakan Tajam</span>
-                    <span>Desain Custom</span>
-                </div>
-
-                <small>Mulai dari</small>
-                <h3>Rp 10.000</h3>
-                <h3>Hubungi kami <small>/ pcs</small></h3>
-                <small>◷ 2–4 hari kerja &nbsp; • &nbsp; 📍 Sinjai</small>
-                <a href="#" class="btn-pesan"
-   onclick="pesanProduk(event, 'ID Card Custom', 'Hubungi kami')">
-    Pesan Sekarang
-</a>
-            </div>
-        </div>
-
-        <!-- Produk 3 -->
-        <div class="produk-card">
-            <div class="produk-gambar">
-                <img src="images/WhatsApp Image 2026-10-14 at 15.54.04.jpeg" alt="Paket Lanyard dan ID Card">
-            </div>
-
-            <div class="produk-info">
-                <span class="label hijau">⬡ Paket</span>
-                <h3>Paket Lanyard + ID Card</h3>
-                <p>Paket hemat lanyard + ID card, siap pakai untuk event dan kebutuhan kantor.</p>
-
-                <div class="fitur">
-                    <span>Lebih Hemat</span>
-                    <span>Siap Pakai</span>
-                    <span>Cocok untuk Event</span>
-                </div>
-
-                <small>Mulai dari</small>
-                <h3>Rp 20.000</h3>
-                 <h3>Hubungi kami <small>/ pcs</small><br>
-                <small>◷ 2–4 hari kerja &nbsp; • &nbsp; 📍 Sinjai</small>
-                
-<a href="#" class="btn-pesan"
-   onclick="pesanProduk(event, 'Paket Lanyard + ID Card', 'Rp15.000')">
-    Pesan Sekarang
-</a>
-            </div>
-        </div>
-
-    </div>
-
-
-</section>
-
-
-
-
-
-<script src="script.js"></script>
-
 
     <script src="script.js"></script>
 </body>
