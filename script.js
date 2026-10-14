@@ -1,6 +1,6 @@
 /* GANTI DENGAN NOMOR WHATSAPP BISNIS KAMU.
    Contoh: 081234567890 menjadi 6281234567890 */
-const NOMOR_WA = "6281234567890";
+const NOMOR_WA = "6281585541885";
 
 function linkWhatsApp(pesan) {
   return `https://wa.me/${NOMOR_WA}?text=${encodeURIComponent(pesan)}`;
@@ -31,12 +31,7 @@ navMenu.querySelectorAll("a").forEach(function (link) {
 
 // TEKS BERGANTI OTOMATIS
 const teksBerganti = document.getElementById("teks-berganti");
-const daftarTeks = [
-  "berkesan.",
-  "profesional.",
-  "sesuai gayamu.",
-  "lebih dikenal.",
-];
+const daftarTeks = ["Bebas Custom.", "Cepat.", "Murah dan.", "Berkualitas."];
 
 let indeksTeks = 0;
 
