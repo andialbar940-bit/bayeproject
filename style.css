@@ -45,7 +45,9 @@ header {
     z-index: 1000;
     background: white;
     border-bottom: 1px solid #e5eae6;
+
 }
+
 
 .navbar {
     min-height: 72px;
@@ -288,8 +290,8 @@ header {
 
 .produk-card {
     min-width: 0;
-    background: white;
-    border: 1px solid #e5eae6;
+    background: rgb(35, 179, 25);
+    border: 1px solid #332a2a;
     border-radius: 14px;
     overflow: hidden;
     transition: transform 0.2s;
@@ -326,12 +328,12 @@ header {
 }
 
 .gambar-hitam {
-    background: #202923;
+    background: #e3f4e7;
     color: white;
 }
 
 .gambar-oranye {
-    background: #fff0dc;
+    background: #e3f4e7;
     color: #9b5a0a;
 }
 
@@ -367,20 +369,20 @@ header {
 
 .produk-info p {
     font-size: 13px;
-    color: var(--abu);
+    color: black;
     margin-top: 8px;
 }
 
 .harga {
     font-size: 16px;
     font-weight: bold;
-    color: var(--hijau-gelap);
+    color: white;
     margin: 18px 0 14px;
 }
 
 .harga small {
     font-size: 11px;
-    color: var(--abu);
+    color: white;
     font-weight: normal;
 }
 
